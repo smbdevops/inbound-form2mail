@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Lead Form Submitted</title>
+</head>
+<body style="color: #627285; font-family: Helvetica">
+<div style="text-align: center; max-width: 300px; margin: auto; padding: 20px">
+    <h1><span th:text="${name}">Submitter name</span> submitted a lead form.</h1>
+    <p>Please give them a call at <a th:href="'tel:' + ${phone}" th:text="${phone}">123456789</a>.</p>
+    <p>They can be reached via e-mail at <a th:href="'mailto:' + ${email}" th:text="${email}"></a>.</p>
+
+    <p>Sincerely, <br /> The Website.</p>
+</div>
+</body>
+</html>
+

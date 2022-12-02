@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container-fluid">
+    <form action="#" th:action="@{/}" th:object="${appointmentRequest}" method="post" class="g-3">
+        <div class="row">
+            <div class="col">
+                <label for="name">What's your name?</label>
+                <input type="text" id="name" th:field="*{name}" class="form-control"
+                       th:classappend="${#fields.hasErrors('name') ? 'is-invalid' : ''}"/>
+                <div class="invalid-feedback" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="name">What's a good e-mail to send additional information to?</label>
+                <input type="email" id="email" th:field="*{email}" class="form-control" placeholder="you@gmail.com"
+                       th:classappend="${#fields.hasErrors('email') ? 'is-invalid' : ''}"/>
+                <div class="invalid-feedback" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="name">What's a good phone number to reach you at?</label>
+                <input type="tel" id="phone" th:field="*{phone}" class="form-control"
+                       th:classappend="${#fields.hasErrors('phone') ? 'is-invalid' : ''}"/>
+                <div class="invalid-feedback" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}">Phone Error
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col">
+                <button type="submit" class="btn btn-primary btn-lg">Please give me a call!</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</html>

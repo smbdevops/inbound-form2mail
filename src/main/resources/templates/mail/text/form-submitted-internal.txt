@@ -1,0 +1,8 @@
+${name} submitted a lead form.
+Please give them a call as quickly as possible at ${phone}.
+
+They can also be reached at ${email}.
+
+Sincerely,
+
+The website.

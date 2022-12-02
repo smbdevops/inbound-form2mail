@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  mail:
+    host: email-smtp.us-west-2.amazonaws.com
+    username: OBFUSCATED
+    password: OBFUSCATED
+    port: 587
+    transport:
+      protocol: smtp
+    properties:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+          required: true
